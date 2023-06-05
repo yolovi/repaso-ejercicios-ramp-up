@@ -62,3 +62,79 @@ function getPrecioMostrarIVA(precio) {
 }
 
 getPrecioMostrarIVA(10);
+
+// ----------------------------------------
+
+// Ejercicios EXTRAS
+// Crea la función penultimoCaracter que reciba un string como argumento y devuelva el penúltimo carácter del mismo. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string". Si el string tiene menos de dos caracteres, debe devolver el primer carácter.
+
+function penultimoCaracter(str) {
+  if (typeof str !== "string") {
+    console.log("Debo ser ejecutada con un string");
+  } else {
+    if (str.length > 2) {
+      console.log(str[str.length - 2]);
+    } else {
+      console.log(str.charAt(0));
+    }
+  }
+}
+
+penultimoCaracter("Juan");
+
+// Crea la función cuentaVocales que reciba un string como argumento y devuelva el número de vocales que contiene. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string".
+
+
+  function cuentaVocales(palabra){
+    if (typeof palabra !== "string") return console.log("Debo ser ejecutada con un string");
+  
+        const vocales = "aáeéiíoóuú";
+      let cantidadVocales = 0;
+      for (const letra of palabra) {
+          if (vocales.includes(letra.toLowerCase())) {
+              cantidadVocales++;
+          }
+      }
+      return cantidadVocales;
+      
+  }
+  console.log(cuentaVocales("Juana"))
+
+// Otra posibilidad:
+//   function cuentaVocales(palabra){
+//     if (typeof palabra !== "string") {
+//         console.log("Debo ser ejecutada con un string");
+//       } else {
+//         const vocales = "aáeéiíoóuú";
+//       let cantidadVocales = 0;
+//       for (const letra of palabra) {
+//           if (vocales.includes(letra.toLowerCase())) {
+//               cantidadVocales++;
+//           }
+//       }
+//       return cantidadVocales;
+        
+//       }
+//   }
+//   console.log(cuentaVocales("Juana"))
+  
+
+// ----------------------------------------
+
+// Crea la función potencia que acepte como argumento dos números y devuelva el resultado de elevar el primer número a la potencia del segundo número.
+
+function potencia(num1, num2){
+    return num1**num2
+  }
+  
+  console.log(potencia(2,3))
+  
+
+
+// Ejercicio extra de DOM
+// Haz lo siguiente:
+// Crea un botón en tu archivo HTML
+// Llama a ese botón en tu archivo js y muestralo por consola
+// Crea una función que cuando se ejecute muestra un alert que diga “Hola”
+// addEventListener. Implementa que cuando el usuario haga “click” en el botón se ejecute la función que habías creado.
+
